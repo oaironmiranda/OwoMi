@@ -1,4 +1,4 @@
-name: bank_project
+name: bank_mockup
 description: A new Flutter project.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -31,6 +31,10 @@ dependencies:
   flutter:
     sdk: flutter
 
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
   google_fonts: ^5.1.0
   flutter_svg: ^2.0.7
   flutter_form_builder: ^9.0.0
@@ -40,10 +44,6 @@ dependencies:
   intl: ^0.18.0
   mask_text_input_formatter: ^2.4.0
 
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
 
 dev_dependencies:
   flutter_test:
@@ -66,11 +66,6 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-  assets:
-    - assets/eye_on.svg
-    - assets/email_icon.svg
-    - assets/lock_icon.svg
-    - assets/eye_off.svg
 
   # To add assets to your application, add an assets section, like this:
   # assets:
