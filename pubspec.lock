@@ -119,10 +119,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_modular
-      sha256: a4c56acc3b98a177a670cf0d5ac8def6cd1dadb12882a38bdee3d04235c45436
+      sha256: "8352a967b58e876a3272acfd7c7bd8c64c73ec7d47b1e6ecad2a5879afefc2a5"
       url: "https://pub.dev"
     source: hosted
-    version: "6.0.0+2"
+    version: "6.0.1"
   flutter_svg:
     dependency: "direct main"
     description:
@@ -241,10 +241,10 @@ packages:
     dependency: transitive
     description:
       name: modular_core
-      sha256: e71c80b381a5c2825dc342c1b276dd4c92f4f6eced08a59222529081624b371a
+      sha256: "4b2580a8a44ad72886fa7f348e65b36df098b082bb6f561919a8623cd489f3b0"
       url: "https://pub.dev"
     source: hosted
-    version: "3.0.0+1"
+    version: "3.0.1+1"
   path:
     dependency: transitive
     description:

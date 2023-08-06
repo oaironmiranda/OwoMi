@@ -7,7 +7,7 @@ class DefaultButton extends StatefulWidget {
       {super.key, required this.onAction, required this.label});
 
   final String label;
-  final Function onAction;
+  final void Function()?  onAction;
 
   @override
   State<DefaultButton> createState() => _DefaultButtonState();
@@ -24,9 +24,7 @@ class _DefaultButtonState extends State<DefaultButton> {
       width: 320,
       height: 40,
       child: ElevatedButton(
-        onPressed: () {
-          widget.onAction;
-        },
+        onPressed: widget.onAction,
         style: ButtonStyle(
           backgroundColor: const MaterialStatePropertyAll(Colors.transparent),
           shape: MaterialStatePropertyAll(

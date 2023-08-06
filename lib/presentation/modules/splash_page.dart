@@ -1,8 +1,22 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class SplashPage extends StatelessWidget {
+class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
+
+  @override
+  State<SplashPage> createState() => _SplashPageState();
+}
+
+class _SplashPageState extends State<SplashPage> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 3))
+        .then((_) => Navigator.of(context).pushReplacementNamed('/signin'));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +35,7 @@ class SplashPage extends StatelessWidget {
             ),
           ),
           child: Center(
-            child:
-            Text(
+            child: Text(
               'Owo mi',
               style: GoogleFonts.courierPrime(
                 color: Colors.white,

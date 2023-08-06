@@ -1,13 +1,22 @@
-
 import 'package:flutter/cupertino.dart';
 
-class DefaultColors{
+class DefaultColors {
   static const buttonColor = LinearGradient(
-      begin: Alignment(1.00, 0.00),
-      end: Alignment(-1, 0),
-      colors: [
-        Color(0xff7000ff),
-        Color(0xffbd00ff)
-      ],
+    begin: Alignment(1.00, 0.00),
+    end: Alignment(-1, 0),
+    colors: [
+      Color(0xff7000ff),
+      Color(0xffbd00ff),
+    ],
   );
+  static const dashboardColor = LinearGradient(
+    begin: Alignment(0.00, -1.00),
+    end: Alignment(0, 1),
+    colors: [
+      Color(0xFF5257D0),
+      Color(0xFFBD00FF),
+    ],
+  );
+
+  static Color themeColor = const Color(0x7FBD00FF).withOpacity(50.0);
 }

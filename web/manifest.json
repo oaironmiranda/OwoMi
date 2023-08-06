@@ -1,6 +1,6 @@
 {
-    "name": "bank_mockup",
-    "short_name": "bank_mockup",
+    "name": "bank_project",
+    "short_name": "bank_project",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
