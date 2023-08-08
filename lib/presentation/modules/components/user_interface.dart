@@ -2,7 +2,12 @@ import 'package:bank_project/infra/infra.dart';
 import 'package:flutter/cupertino.dart';
 
 class UserInterfaceContainer extends StatefulWidget {
-  const UserInterfaceContainer({super.key});
+  final String name;
+
+  const UserInterfaceContainer({
+    super.key,
+    required this.name,
+  });
 
   @override
   State<UserInterfaceContainer> createState() => _UserInterfaceContainerState();
@@ -13,25 +18,29 @@ class _UserInterfaceContainerState extends State<UserInterfaceContainer> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 220,
-      decoration: const BoxDecoration(
-        gradient: DefaultColors.dashboardColor
-      ),
+      height: 190,
+      decoration: const BoxDecoration(gradient: DefaultColors.dashboardColor),
       child: Padding(
         padding: const EdgeInsets.only(top: 68.0, left: 36),
         child: Row(
           children: [
-            Column(
-              children: [
-                RichText(text: TextSpan(
-                  text: 'Welcome back,\n',
-                  children: [
-                    TextSpan(
-                      text: 'USER'
-                    ),
-                  ]
-                )),
-              ],
+            Padding(
+              padding: const EdgeInsets.only(top: 5.0),
+              child: Column(
+                children: [
+                  RichText(
+                    text: TextSpan(
+                        text: 'Welcome back,\n',
+                        style: Fonts.h3W400,
+                        children: [
+                          TextSpan(
+                            text: widget.name,
+                            style: Fonts.h4W700,
+                          ),
+                        ]),
+                  ),
+                ],
+              ),
             ),
             //Add icon user
           ],

@@ -19,4 +19,6 @@ class DefaultColors {
   );
 
   static Color themeColor = const Color(0x7FBD00FF).withOpacity(50.0);
+  static Color greenIncome = const Color(0xFF5AAA5A);
+  static Color redExpenses = const Color(0xFFAA5A5A);
 }

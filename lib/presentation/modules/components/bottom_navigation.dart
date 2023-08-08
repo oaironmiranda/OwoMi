@@ -1,5 +1,7 @@
-import 'package:bank_project/presentation/modules/components/bottom_nav_item.dart';
+import 'package:bank_project/infra/infra.dart';
 import 'package:flutter/material.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
+
 
 class BankBottomNavigator extends StatefulWidget {
   const BankBottomNavigator({super.key});
@@ -9,23 +11,25 @@ class BankBottomNavigator extends StatefulWidget {
 }
 
 class _BankBottomNavigatorState extends State<BankBottomNavigator> {
+  int visit = 0;
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      items: const [
-        BottomNavigationBarItem(
-          label: '',
-          icon: BottomNavItem(icon: 'assets/minus_icon.svg')),
-        BottomNavigationBarItem(
-          label: '',
-          icon: BottomNavItem(icon: 'assets/home_icon.svg'),
-        ),
-        BottomNavigationBarItem(
-          label: '',
-          icon: BottomNavItem(icon: 'assets/plus_icon.svg'),
-        ),
-      ],
+    return GNav(
+      padding: const EdgeInsets.all(16),
+      tabs: items,
+      iconSize: 20,
+      gap: 8,
+      mainAxisAlignment: MainAxisAlignment.center,
       backgroundColor: Colors.white,
+      color: const Color(0x7FBD00FF),
+      activeColor: const Color(0x7FBD00FF),
+      tabBackgroundColor: const Color(0x26BD00FF),
     );
   }
+
+  List<GButton> items = const [
+    GButton(icon: Icons.remove_circle_outline, text: 'home'),
+    GButton(icon: Icons.home, text: 'home'),
+    GButton(icon: Icons.add_circle_outline, text: 'Incomes'),
+  ];
 }
